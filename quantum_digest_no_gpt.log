@@ -1,0 +1,75 @@
+2025-08-09 16:58:46,464 - INFO - Quantum Digest No-GPT Preview initialized successfully
+2025-08-09 16:58:46,464 - INFO - Starting Quantum Computing Digest No-GPT Preview
+2025-08-09 16:58:46,464 - INFO - Fetching data from all sources...
+2025-08-09 16:58:46,467 - INFO - Fetching Research Paper List from https://docs.google.com/spreadsheets/d/e/2PACX-1vTjka1LpVvM74sNMqcZCxh0WsQXi8IUbIknLEojpmSysEeQUG2BStQNGwdgKD9Q9jkzAAtDmcMrLYG5/pub?output=csv
+2025-08-09 16:58:48,282 - INFO - Successfully fetched 1280 rows from Research Paper List
+2025-08-09 16:58:48,284 - INFO - Fetching Research Paper Brief from https://docs.google.com/spreadsheets/d/e/2PACX-1vQQGTFKG6AKhJVLBujShiHC6vtQ9gbN5TSnrcEqzElOsCJTkRdPYXNThJJQNhHSY68Z0-zfiJffhz64/pub?output=csv
+2025-08-09 16:58:49,849 - INFO - Successfully fetched 32 rows from Research Paper Brief
+2025-08-09 16:58:49,864 - INFO - Fetching arXiv papers
+2025-08-09 16:58:50,239 - INFO - Successfully fetched 6 arXiv papers
+2025-08-09 16:58:50,239 - INFO - Fetching Google News
+2025-08-09 16:58:50,985 - INFO - Successfully fetched 10 news items
+2025-08-09 16:58:50,985 - INFO - Formatting research papers...
+2025-08-09 16:58:50,985 - INFO - Formatting arXiv papers...
+2025-08-09 16:58:50,985 - INFO - Formatting news items...
+2025-08-09 16:58:50,985 - INFO - Building HTML digest preview
+2025-08-09 16:58:50,985 - INFO - No-GPT preview digest saved to quantum_digest_no_gpt_20250809_165850.html
+2025-08-09 16:58:51,106 - INFO - Preview opened in browser
+2025-08-09 16:58:51,106 - INFO - No-GPT preview generation completed in 4.64 seconds
+2025-08-09 17:01:59,568 - INFO - Quantum Digest No-GPT Preview initialized successfully
+2025-08-09 17:01:59,568 - INFO - Starting Quantum Computing Digest No-GPT Preview
+2025-08-09 17:01:59,569 - INFO - Fetching data from all sources...
+2025-08-09 17:01:59,569 - INFO - Fetching Research Paper List from https://docs.google.com/spreadsheets/d/e/2PACX-1vTjka1LpVvM74sNMqcZCxh0WsQXi8IUbIknLEojpmSysEeQUG2BStQNGwdgKD9Q9jkzAAtDmcMrLYG5/pub?output=csv
+2025-08-09 17:02:00,964 - INFO - Successfully fetched 1280 rows from Research Paper List
+2025-08-09 17:02:00,964 - INFO - Fetching Research Paper Brief from https://docs.google.com/spreadsheets/d/e/2PACX-1vQQGTFKG6AKhJVLBujShiHC6vtQ9gbN5TSnrcEqzElOsCJTkRdPYXNThJJQNhHSY68Z0-zfiJffhz64/pub?output=csv
+2025-08-09 17:02:02,277 - INFO - Successfully fetched 32 rows from Research Paper Brief
+2025-08-09 17:02:02,277 - INFO - Fetching arXiv papers
+2025-08-09 17:02:02,476 - INFO - Successfully fetched 6 arXiv papers
+2025-08-09 17:02:02,476 - INFO - Fetching Google News
+2025-08-09 17:02:03,394 - INFO - Successfully fetched 10 news items
+2025-08-09 17:02:03,394 - INFO - Research List columns: ['Date (GMT)', 'Job Link', 'Origin URL', 'arXiv Search Results Limit', 'Position', 'arXiv ID', 'PDF Link', 'Other Formats Link', 'Title', 'Authors', 'Abstract', 'Submission Date', 'Comments', 'arXiv Page Link']
+2025-08-09 17:02:03,394 - INFO - Research Brief columns: ['Date (GMT)', 'Job Link', 'Origin URL', 'Quantum Physics Papers Limit', 'Position', 'Title', 'Authors', 'Primary Author', 'Subjects', 'Abstract', 'Primary Author Link', 'Co-author Link 1', 'Co-author Link 2']
+2025-08-09 17:02:03,394 - INFO - Sample paper keys: ['Date (GMT)', 'Job Link', 'Origin URL', 'arXiv Search Results Limit', 'Position', 'arXiv ID', 'PDF Link', 'Other Formats Link', 'Title', 'Authors', 'Abstract', 'Submission Date', 'Comments', 'arXiv Page Link']
+2025-08-09 17:02:03,394 - INFO - Formatting research papers...
+2025-08-09 17:02:03,394 - INFO - Formatting arXiv papers...
+2025-08-09 17:02:03,394 - INFO - Formatting news items...
+2025-08-09 17:02:03,394 - INFO - Building HTML digest preview
+2025-08-09 17:02:03,394 - INFO - No-GPT preview digest saved to quantum_digest_no_gpt_20250809_170203.html
+2025-08-09 17:02:03,517 - INFO - Preview opened in browser
+2025-08-09 17:02:03,517 - INFO - No-GPT preview generation completed in 3.95 seconds
+2025-08-09 17:07:07,024 - INFO - Quantum Digest No-GPT Preview initialized successfully
+2025-08-09 17:07:07,024 - INFO - Starting Quantum Computing Digest No-GPT Preview
+2025-08-09 17:07:07,024 - INFO - Fetching data from all sources...
+2025-08-09 17:07:07,024 - INFO - Fetching Research Paper List from https://docs.google.com/spreadsheets/d/e/2PACX-1vTjka1LpVvM74sNMqcZCxh0WsQXi8IUbIknLEojpmSysEeQUG2BStQNGwdgKD9Q9jkzAAtDmcMrLYG5/pub?output=csv
+2025-08-09 17:07:08,329 - INFO - Successfully fetched 1280 rows from Research Paper List
+2025-08-09 17:07:08,329 - INFO - Fetching Research Paper Brief from https://docs.google.com/spreadsheets/d/e/2PACX-1vQQGTFKG6AKhJVLBujShiHC6vtQ9gbN5TSnrcEqzElOsCJTkRdPYXNThJJQNhHSY68Z0-zfiJffhz64/pub?output=csv
+2025-08-09 17:07:09,315 - INFO - Successfully fetched 32 rows from Research Paper Brief
+2025-08-09 17:07:09,315 - INFO - Fetching arXiv papers
+2025-08-09 17:07:09,495 - INFO - Successfully fetched 6 arXiv papers
+2025-08-09 17:07:09,495 - INFO - Fetching Google News
+2025-08-09 17:07:10,381 - INFO - Successfully fetched 10 news items
+2025-08-09 17:07:10,381 - INFO - Formatting research papers...
+2025-08-09 17:07:10,381 - INFO - Formatting arXiv papers...
+2025-08-09 17:07:10,381 - INFO - Formatting news items...
+2025-08-09 17:07:10,381 - INFO - Building HTML digest preview
+2025-08-09 17:07:10,381 - INFO - No-GPT preview digest saved to quantum_digest_no_gpt_20250809_170710.html
+2025-08-09 17:07:10,533 - INFO - Preview opened in browser
+2025-08-09 17:07:10,547 - INFO - No-GPT preview generation completed in 3.52 seconds
+2025-08-09 17:26:13,484 - INFO - Quantum Digest No-GPT Preview initialized successfully
+2025-08-09 17:26:13,484 - INFO - Starting Quantum Computing Digest No-GPT Preview
+2025-08-09 17:26:13,484 - INFO - Fetching data from all sources...
+2025-08-09 17:26:13,484 - INFO - Fetching Research Paper List from https://docs.google.com/spreadsheets/d/e/2PACX-1vTjka1LpVvM74sNMqcZCxh0WsQXi8IUbIknLEojpmSysEeQUG2BStQNGwdgKD9Q9jkzAAtDmcMrLYG5/pub?output=csv
+2025-08-09 17:26:15,467 - INFO - Successfully fetched 1280 rows from Research Paper List
+2025-08-09 17:26:15,469 - INFO - Fetching Research Paper Brief from https://docs.google.com/spreadsheets/d/e/2PACX-1vQQGTFKG6AKhJVLBujShiHC6vtQ9gbN5TSnrcEqzElOsCJTkRdPYXNThJJQNhHSY68Z0-zfiJffhz64/pub?output=csv
+2025-08-09 17:26:16,584 - INFO - Successfully fetched 32 rows from Research Paper Brief
+2025-08-09 17:26:16,585 - INFO - Fetching arXiv papers
+2025-08-09 17:26:16,738 - INFO - Successfully fetched 6 arXiv papers
+2025-08-09 17:26:16,738 - INFO - Fetching Google News
+2025-08-09 17:26:17,583 - INFO - Successfully fetched 10 news items
+2025-08-09 17:26:17,583 - INFO - Formatting research papers...
+2025-08-09 17:26:17,583 - INFO - Formatting arXiv papers...
+2025-08-09 17:26:17,583 - INFO - Formatting news items...
+2025-08-09 17:26:17,583 - INFO - Building HTML digest preview
+2025-08-09 17:26:17,583 - INFO - No-GPT preview digest saved to quantum_digest_no_gpt_20250809_172617.html
+2025-08-09 17:26:17,732 - INFO - Preview opened in browser
+2025-08-09 17:26:17,732 - INFO - No-GPT preview generation completed in 4.25 seconds
