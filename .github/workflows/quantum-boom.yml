@@ -1,0 +1,59 @@
+name: QuantumBoom Daily Deployment
+
+on:
+  # Run daily at 8:00 AM UTC (adjust timezone as needed)
+  schedule:
+    - cron: '0 8 * * *'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+  
+  # Run on push to main branch (for testing)
+  push:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🚀 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: 📦 Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: 🔧 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: 🌐 Generate and Deploy QuantumBoom
+      env:
+        NETLIFY_ACCESS_TOKEN: ${{ secrets.NETLIFY_ACCESS_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      run: |
+        echo "🔬 Starting QuantumBoom generation..."
+        python quantumboom.py
+        echo "✅ QuantumBoom deployment completed!"
+        
+    - name: 📊 Upload deployment artifacts
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: quantum-boom-deployment
+        path: |
+          output/deploy/
+          output/digest_backup_*.html
+          quantumboom.log
+        retention-days: 7
