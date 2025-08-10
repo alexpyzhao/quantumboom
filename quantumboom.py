@@ -295,8 +295,12 @@ class QuantumBoom:
 
     def build_html_digest(self, formatted_content: Dict[str, str], stats: Dict[str, int]) -> str:
         """Build the complete HTML digest for the website."""
-        current_date = datetime.now().strftime("%B %d, %Y")
-        current_time = datetime.now().strftime("%H:%M")
+        # Convert UTC to CST (UTC-6)
+        from datetime import timezone, timedelta
+        cst = timezone(timedelta(hours=-6))
+        cst_time = datetime.now(cst)
+        current_date = cst_time.strftime("%B %d, %Y")
+        current_time = cst_time.strftime("%H:%M CST")
 
         html_template = f"""
         <!DOCTYPE html>
