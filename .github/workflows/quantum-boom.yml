@@ -21,12 +21,12 @@ jobs:
       uses: actions/checkout@v4
       
     - name: 🐍 Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.9'
         
     - name: 📦 Cache pip dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -48,7 +48,7 @@ jobs:
         echo "✅ QuantumBoom deployment completed!"
         
     - name: 📊 Upload deployment artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: quantum-boom-deployment
@@ -57,3 +57,36 @@ jobs:
           output/digest_backup_*.html
           quantumboom.log
         retention-days: 7
+        
+    - name: 📝 Create deployment summary
+      if: success()
+      run: |
+        echo "## 🎉 QuantumBoom Deployment Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📊 Deployment Details" >> $GITHUB_STEP_SUMMARY
+        echo "- **Date:** $(date)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Status:** ✅ Success" >> $GITHUB_STEP_SUMMARY
+        echo "- **Site:** https://quantumboom.netlify.app" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📁 Files Generated" >> $GITHUB_STEP_SUMMARY
+        echo "- **Website:** output/deploy/index.html" >> $GITHUB_STEP_SUMMARY
+        echo "- **Backup:** output/digest_backup_*.html" >> $GITHUB_STEP_SUMMARY
+        echo "- **Logs:** quantumboom.log" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔗 Quick Links" >> $GITHUB_STEP_SUMMARY
+        echo "- [Live Site](https://quantumboom.netlify.app)" >> $GITHUB_STEP_SUMMARY
+        echo "- [Netlify Dashboard](https://app.netlify.com/sites/quantumboom)" >> $GITHUB_STEP_SUMMARY
+        
+    - name: 🚨 Notify on failure
+      if: failure()
+      run: |
+        echo "## ❌ QuantumBoom Deployment Failed" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔍 Troubleshooting" >> $GITHUB_STEP_SUMMARY
+        echo "1. Check the logs in the Actions tab" >> $GITHUB_STEP_SUMMARY
+        echo "2. Verify Netlify credentials in repository secrets" >> $GITHUB_STEP_SUMMARY
+        echo "3. Ensure all dependencies are properly installed" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📋 Required Secrets" >> $GITHUB_STEP_SUMMARY
+        echo "- NETLIFY_ACCESS_TOKEN" >> $GITHUB_STEP_SUMMARY
+        echo "- NETLIFY_SITE_ID" >> $GITHUB_STEP_SUMMARY
